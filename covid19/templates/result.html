@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<div class="container">
+
+
+<h1 class=text-center> Covid-19 all result</h1>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">SI No.</th>
+      <th scope="col">Age</th>
+      <th scope="col">Sex</th>
+      <th scope="col">Temperature</th>
+      <th scope="col">Assessment Date</th>
+      <th scope="col">Assessment Score</th>
+      <th scope="col">Covid 19 Result</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+{%for item in obj %}
+
+    <tr>
+      
+      <td>{{ item.id }}</td>
+      <td>{{item.age}}</td>
+      <td>{{item.gender}}</td>
+     <td>{{item.temperature}}</td>
+     <td>{{item.pub_date}}</td>
+     
+     <td>{{item.score}}</td>
+     <td>{{item.Covid_Result}}</td>
+     
+    </tr>
+
+  </tbody>
+  {%endfor%}
+</table>
+
+
+
+
+</div>
+
+{%endblock%}
